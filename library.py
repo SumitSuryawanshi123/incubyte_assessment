@@ -16,3 +16,10 @@ class Library:
 
     def get_available_books(self):
         return [book for book in self.books if book.is_available]
+    
+    def borrow_book(self, isbn):
+        for book in self.books:
+            if book.isbn == isbn and book.is_available:
+                book.is_available = False
+                return
+        raise Exception("Book not available")

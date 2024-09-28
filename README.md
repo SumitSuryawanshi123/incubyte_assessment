@@ -48,7 +48,7 @@ The project includes comprehensive unit tests for all core functionalities, loca
 All tests should pass before the implementation is considered complete. Here's an example of how the output will look if all tests pass:
 
 
-![Alt Text](image.png)
+![Alt Text](./image.png)
 
 
 ## TDD Workflow

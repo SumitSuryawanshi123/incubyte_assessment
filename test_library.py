@@ -15,6 +15,14 @@ class TestLibrary(unittest.TestCase):
        library.add_book(book)
        library.borrow_book("123456789")
        self.assertFalse(book.is_available)
+       
+    def test_return_book(self):
+        library = Library()
+        book = Book("123456789", "Test Book", "Author Name", 2024)
+        library.add_book(book)
+        library.borrow_book("123456789")
+        library.return_book("123456789")
+        self.assertTrue(book.is_available)
 
 if __name__ == "__main__":
     unittest.main()
